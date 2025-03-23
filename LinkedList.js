@@ -1,6 +1,6 @@
 //LinkedList.js
 
-import Node from "./Node";
+import Node from "./Node.js";
 
 class LinkedList {
   constructor() {
@@ -106,5 +106,21 @@ class LinkedList {
     return null;
   }
 
-  
+  toString() {
+    if (this.root == null) return "null";
+
+    let currentNode = this.root;
+    const output = [];
+    output.push(`(${currentNode.value})`);
+
+    while (currentNode.nextNode !== null) {
+      currentNode = currentNode.nextNode;
+      output.push(`(${currentNode.value})`);
+
+    }
+    return output.join(" -> ") + " -> null";
+  }
 }
+
+
+export default LinkedList;
