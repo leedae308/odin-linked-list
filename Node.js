@@ -1,9 +1,11 @@
 //Node.js
 
 class Node {
-  constructor(value = null, nextNode = null) {
+  constructor(value = null, leftNode = null, rightNode = null) {
     this.value = value;
-    this.nextNode = nextNode;
+    // this.nextNode = nextNode;
+    this.leftNode = leftNode;
+    this.rightNode = rightNode;
   }
 }
 
